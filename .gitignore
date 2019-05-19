@@ -1,0 +1,3 @@
+#DB関連設定はコミットしない
+settings/
+node_modules/
