@@ -1,7 +1,13 @@
 const express = require('express');
-      router  = express.Router();
-      db_route = require('./db');
+const router  = express.Router({mergeParams: true});
 
-router.use('/db',db_route);
+router.use((req, res, next) => {
+    console.log((new Date()).toISOString());
+    next();
+});
+
+router.use('/login',require('./login.js'));
+router.use('/db',require('./db.js'));
+
 
 module.exports=router;

@@ -1,7 +1,7 @@
 const express = require('express');
-      router  = express.Router();
-      DBAccessor = require('../../mysql/db_accessor.js');
-      
+const router  = express.Router();
+const DBAccessor = require('../../mysql/db_accessor.js');
+    
 router.get('/test',(req,res) => {
     res.json({
         message:"Hello DB test API",

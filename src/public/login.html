@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+        <link rel="stylesheet" href="css/login.css">
+  </head>
+  <body>
+    <div id="mobileContainer">
+      <div id="mobileContent">
+        <h1 class="msg">Welcome</h1>
+        <form method="POST" class="loginform" action="/api/v1/login">
+          <ul>
+            <li>  
+             <label for="email">Email</label>
+             <input type="text" placeholder="Email" name="email">
+            </li>
+            <li>
+             <label for="password">Password</label>
+             <input type="password" placeholder="Password" name="password">
+            </li>
+          </ul>
+          <div id="loginformBtn">   
+            <button type="submit" class="loginformBtn">Login</button>
+          </div> 
+          <div style="margin-top: 20px;"><a href="signup.html">Sign Up</a></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>>
