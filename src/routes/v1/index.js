@@ -7,6 +7,7 @@ router.use((req, res, next) => {
 });
 
 router.use('/login',require('./login.js'));
+router.use('/media',require('./media.js'));
 router.use('/db',require('./db.js'));
 
 
