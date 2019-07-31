@@ -1,6 +1,7 @@
 var connection;
 const mysql = require('mysql2/promise');
-var db_settings = require('../settings/db_setting');
+const db_settings = require('../settings/db_setting');
+const fs = require('fs');
 
 module.exports = class DBAccessor {
   async connect(dbname) {
@@ -9,7 +10,10 @@ module.exports = class DBAccessor {
       port: 3306,
       user: db_settings.DB_USER,
       password: db_settings.DB_PASS,
-      database: db_settings.DB_NAME
+      database: db_settings.DB_NAME,
+      ssl  : {
+        ca : fs.readFileSync(db_settings.DB_SSL_FULLPATH)
+      }
     });
 
     this.dbname = dbname;
